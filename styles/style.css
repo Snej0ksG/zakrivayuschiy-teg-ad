@@ -47,6 +47,7 @@
 }
 .button:hover .floppy__icon {
     z-index: 100;
+
 }
 .button:focus {
     box-shadow: 2px 2px 0 var(--border-color);
@@ -162,12 +163,18 @@
     margin: 52px auto 100px;
     min-height: 51px;
     gap: 8px;
+
 }
 .button__save .floppy__icon {
     width: 21px;
     height: 21px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
 }
 
+.button__save:hover .floppy__icon {
+    filter: brightness(0) invert(1);
+}
 .save__modal {
     position: fixed;
     inset: 0;
@@ -227,7 +234,7 @@
 }
 
 .image7 {
-    filter: blur(20px);
+    filter: blur(5px);
 }
 
 .image8 {
@@ -244,9 +251,11 @@
     .header h1 {
         font-size: 49px;
     }
+
     .header h2 {
         font-size: 14px;
     }
+
     .button__save {
         display: flex;
         flex-direction: column;
@@ -257,6 +266,12 @@
     .button__save .floppy__icon {
         width: 28px;
         height: 28px;
-        color: black;
+
+    }
+
+    .floppy__icon {
+        width: 28px;
+        height: 28px;
     }
 }
+
